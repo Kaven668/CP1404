@@ -21,4 +21,5 @@ def determine_grades(score):
     else:
         return "Bad"
 
+
 main()
