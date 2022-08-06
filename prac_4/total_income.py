@@ -13,26 +13,13 @@ def main():
     for mounth_number in range(1, months + 1):
         income = float(input("Enter income for mounth_number {}:".format(str(mounth_number)) ))
         incomes.append(income)
-    return months
+    get_total_incomes(incomes)
 
-def get_total_incomes():
+def get_total_incomes(income):
     total = 0
-    
     print("\nIncome Report\n-------------")
-    for mounth_number in range(1, months + 1):
-        income = incomes[mounth_number - 1]
-        total += income
-        print("Month {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(mounth_number, income, total))
-
-
-
-
-get_total_incomes()
-
-
-
-
-
-
+    for mounth, income in enumerate(incomes):
+       total += income
+       print("Month {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(mounth+1, income, total))
 
 main()
