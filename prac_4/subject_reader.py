@@ -17,12 +17,12 @@ def display_subject(subjects):
     for subject in subjects:
         print(f"{subject[0]} is taught by {subject[1]} and has {subject[2]} students")
         total_students += subject[2]
-    print("Total students:",total_students)
+    print("Total students:", total_students)
 
 
 def load_subjcet():
     """Read data from file formatted like: subject,lecturer,number of students."""
-    subject =[]
+    subject = []
     input_file = open(FILENAME)
     for line in input_file:
         line = line.strip()  # Remove the \n
@@ -31,7 +31,6 @@ def load_subjcet():
         subject.append(parts)
     input_file.close()
     return subject
-
 
 
 main()
