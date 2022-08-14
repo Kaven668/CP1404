@@ -26,6 +26,7 @@ def load_subjcet():
     input_file = open(FILENAME)
     for line in input_file:
         line = line.strip()  # Remove the \n
+        print("line: ",repr(line))
         parts = line.split(',')  # Separate the data into its parts
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         subject.append(parts)
