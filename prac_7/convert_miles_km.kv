@@ -1,0 +1,23 @@
+BoxLayout:
+    orientation:'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            text:"34"
+            id: input_miles
+
+        BoxLayout:
+            orientation:'vertical'
+            size_hint_x: 0.3
+            Button:
+                text:"Up"
+                on_press:app.add_changes(1)
+            Button:
+                text:"Down"
+                on_press:app.add_changes(-1)
+    Button:
+        text:"Concert m to km"
+        on_press: app.handel_problem()
+    Label:
+        text:""
+        id: output_label
