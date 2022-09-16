@@ -35,6 +35,26 @@ class DynamicWidgetsApp(App):
     def clear_all(self):
         """Clearn all information"""
         self.root.ids.entries_box.clear_widgets()
+        self.status_text = ''
+    def add_a_new(self):
+        self.status_text = self.root.ids.user_input.text
+        new_tab= Button(text=self.status_text)
+        new_tab.bind(on_release =self.press_entry_2)
+        self.root.ids.entries_box.add_widget(new_tab)
+        self.clear_filed()
+
+    def press_entry_2(self,instance):
+        input1 = instance.text
+        self.status_text = f"{input1}"
+
+
+
+    def clear_filed(self):
+
+        self.root.ids.user_input.text = ""
+
+
+
 
 
 DynamicWidgetsApp().run()

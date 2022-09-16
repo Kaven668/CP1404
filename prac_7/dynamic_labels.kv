@@ -10,9 +10,15 @@ BoxLayout:
     BoxLayout:
         orientation: 'horizontal'
         size_hint_y: 0.2
+
+        TextInput:
+            id: user_input
+            value: ""
+
         Button:
             text: "Create Widgets"
-            on_release: app.create_widgets()
+            on_release: app.add_a_new()
+
         Button:
             text: "Clear Widgets"
             on_release: app.clear_all()
